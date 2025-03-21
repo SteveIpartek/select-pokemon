@@ -25,7 +25,6 @@ document.addEventListener('DOMContentLoaded', () => {
   
     function displayPokemonInfo(pokemon) {
       let types = pokemon.types.map(type => type.type.name).join(', ');
-      let abilities = pokemon.abilities.map(ability => ability.ability.name).join(', ');
       let imageUrl = pokemon.sprites.front_default;
   
       container.innerHTML = `
