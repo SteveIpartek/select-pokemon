@@ -29,12 +29,21 @@ document.addEventListener('DOMContentLoaded', () => {
       let imageUrl = pokemon.sprites.front_default;
   
       container.innerHTML = `
+        <div id="fichapoke">
+        <button id="reset">Atras</button>
         <h2>${pokemon.name.toUpperCase()}</h2>
-        <img src="${imageUrl}" alt="${pokemon.name}" style="max-width: 200px;">
+        <img id="imgPokeSty" src="${imageUrl}" alt="${pokemon.name}" style="max-width: 200px;">
         <p><strong>Types:</strong> ${types}</p>
-        <p><strong>Abilities:</strong> ${abilities}</p>
         <p><strong>Height:</strong> ${pokemon.height}</p>
         <p><strong>Weight:</strong> ${pokemon.weight}</p>
-      `;
+        </div>`;
+
+        
+        const resetButton = document.getElementById('reset');
+
+            resetButton.addEventListener('click', function() {
+                location.reload();
+            });
+        
     }
-  });
+});
